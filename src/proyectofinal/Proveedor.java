@@ -39,8 +39,21 @@ public class Proveedor {
         return nombre != null &&
            nombre.matches("[A-Za-zÁÉÍÓÚáéíóúÑñ ]{3,60}");
     }
-
-    
+    // VALIDAR TELÉFONO
+    public boolean validarTelefono() {
+        return telefono != null &&
+           telefono.matches("\\d{9}");
+    }
+    // VALIDAR CORREO
+    public boolean validarCorreo() {
+        return correo != null &&
+           correo.matches("^[A-Za-z0-9._%+-]+@gmail\\.com$");
+    }
+    // VALIDAR DIRECCIÓN
+    public boolean validarDireccion() {
+        return direccion != null &&
+           direccion.trim().length() >= 5;
+    }
     
     public int getIdProveedor() {
         return idProveedor;
