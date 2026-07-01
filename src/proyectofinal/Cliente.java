@@ -53,12 +53,27 @@ public class Cliente {
     }
     
     // VALIDAR NOMBRES
-     public boolean validarNombre() {
+    public boolean validarNombre() {
 
            return nombres != null &&
            nombres.matches("[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,50}");
-     }
+    }
 
+     // VALIDAR APELLIDO PATERNO
+    public boolean validarApellidoPaterno() {
+
+           return apellidopaterno != null &&
+           apellidopaterno.matches("[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,50}");
+
+    }
+    // VALIDAR APELLIDO MATERNO
+    public boolean validarApellidoMaterno() {
+
+           return apellidomaterno != null &&
+           apellidomaterno.matches("[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,50}");
+
+    }
+     
     public void verDatos() {
         System.out.println(
                 nrodocumento + " | " +
@@ -68,6 +83,8 @@ public class Cliente {
                 apellidomaterno
         );
     }
+    
+    
 
     public int getIdCliente() {
         return idCliente;
