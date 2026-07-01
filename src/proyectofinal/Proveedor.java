@@ -34,7 +34,12 @@ public class Proveedor {
     public boolean validarRuc() {
         return ruc != null && ruc.matches("\\d{11}");
     }
-    
+    // VALIDAR NOMBRE
+    public boolean validarNombre() {
+        return nombre != null &&
+           nombre.matches("[A-Za-zÁÉÍÓÚáéíóúÑñ ]{3,60}");
+    }
+
     
     
     public int getIdProveedor() {
