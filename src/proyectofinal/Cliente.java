@@ -73,6 +73,20 @@ public class Cliente {
            apellidomaterno.matches("[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,50}");
 
     }
+    
+    // VALIDAR TELÉFONO
+    public boolean validarTelefono() {
+
+       return telefono.matches("\\d{9}");
+   
+    }
+
+    // VALIDAR CORREO
+    public boolean validarCorreo() {
+
+        return Correo.matches("^[A-Za-z0-9._%+-]+@gmail\\.com$");
+
+    }
      
     public void verDatos() {
         System.out.println(
@@ -84,8 +98,6 @@ public class Cliente {
         );
     }
     
-    
-
     public int getIdCliente() {
         return idCliente;
     }
